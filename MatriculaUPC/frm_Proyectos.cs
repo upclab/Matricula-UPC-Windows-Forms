@@ -103,12 +103,19 @@ namespace MatriculaUPC
         {
             if (datagridview.SelectedRows.Count != 1)
             {
-                MessageBox.Show("Por favor seleccione la fila que desea editar!");
+                MessageBox.Show("Por favor seleccione una fila!");
                 return;
             }
 
             Program.frm_proyecto.PrepararModoEditar(Convert.ToInt32(datagridview.SelectedRows[0].Cells[0].Value));
-            Program.frm_proyecto.Show();
+            try
+            {
+                Program.frm_proyecto.Show();
+            }
+            catch (Exception ex)
+            {
+                btn_editar_Click(sender, e);
+            }
         }
 
         private void btn_filtrar_Click(object sender, EventArgs e)
@@ -144,7 +151,14 @@ namespace MatriculaUPC
             }
 
             Program.frm_equipo.Preparar(Convert.ToInt32(datagridview.SelectedRows[0].Cells[0].Value));
-            Program.frm_equipo.Show();
+            try
+            {
+                Program.frm_equipo.Show();
+            }
+            catch (Exception ex)
+            {
+                btn_ver_equipo_Click(sender, e);
+            }
         }
 
         private void btn_asociar_equipo_Click(object sender, EventArgs e)
@@ -156,7 +170,33 @@ namespace MatriculaUPC
             }
 
             Program.frm_asignar_equipo.Preparar(Convert.ToInt32(datagridview.SelectedRows[0].Cells[0].Value));
-            Program.frm_asignar_equipo.Show();
+            try
+            {
+                Program.frm_asignar_equipo.Show();
+            }
+            catch (Exception ex)
+            {
+                btn_asociar_equipo_Click(sender, e);
+            }
+        }
+
+        private void btn_avances_Click(object sender, EventArgs e)
+        {
+            if (datagridview.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Por favor seleccione una fila!");
+                return;
+            }
+
+            Program.frm_avances.Preparar(Convert.ToInt32(datagridview.SelectedRows[0].Cells[0].Value));
+            try
+            {
+                Program.frm_avances.Show();
+            }
+            catch (Exception ex)
+            {
+                btn_avances_Click(sender, e);
+            }
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)

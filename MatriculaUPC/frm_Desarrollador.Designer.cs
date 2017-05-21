@@ -160,6 +160,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frm_Desarrollador";
             this.Text = "Agregar Desarrollador";
+            this.Load += new System.EventHandler(this.frm_Desarrollador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

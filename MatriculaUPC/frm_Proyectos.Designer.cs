@@ -36,6 +36,7 @@
             this.btn_editar = new System.Windows.Forms.Button();
             this.btn_ver_equipo = new System.Windows.Forms.Button();
             this.btn_asociar_equipo = new System.Windows.Forms.Button();
+            this.btn_avances = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +118,16 @@
             this.btn_asociar_equipo.UseVisualStyleBackColor = true;
             this.btn_asociar_equipo.Click += new System.EventHandler(this.btn_asociar_equipo_Click);
             // 
+            // btn_avances
+            // 
+            this.btn_avances.Location = new System.Drawing.Point(189, 342);
+            this.btn_avances.Name = "btn_avances";
+            this.btn_avances.Size = new System.Drawing.Size(101, 23);
+            this.btn_avances.TabIndex = 2;
+            this.btn_avances.Text = "Ver Avances";
+            this.btn_avances.UseVisualStyleBackColor = true;
+            this.btn_avances.Click += new System.EventHandler(this.btn_avances_Click);
+            // 
             // frm_Proyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +135,7 @@
             this.ClientSize = new System.Drawing.Size(805, 374);
             this.ControlBox = false;
             this.Controls.Add(this.btn_asociar_equipo);
+            this.Controls.Add(this.btn_avances);
             this.Controls.Add(this.btn_ver_equipo);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_filtrar);
@@ -150,5 +162,6 @@
         private System.Windows.Forms.Button btn_editar;
         private System.Windows.Forms.Button btn_ver_equipo;
         private System.Windows.Forms.Button btn_asociar_equipo;
+        private System.Windows.Forms.Button btn_avances;
     }
 }

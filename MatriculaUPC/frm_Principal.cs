@@ -42,5 +42,17 @@ namespace MatriculaUPC
             }
 
         }
+
+        private void btn_avance_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Program.frm_avances.Show();
+            }
+            catch (Exception ex)
+            {
+                btn_avance_Click(sender, e);
+            }
+        }
     }
 }

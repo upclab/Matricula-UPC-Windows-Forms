@@ -60,8 +60,9 @@
             this.btn_avance.Name = "btn_avance";
             this.btn_avance.Size = new System.Drawing.Size(75, 23);
             this.btn_avance.TabIndex = 2;
-            this.btn_avance.Text = "Avance";
+            this.btn_avance.Text = "Avances";
             this.btn_avance.UseVisualStyleBackColor = true;
+            this.btn_avance.Click += new System.EventHandler(this.btn_avance_Click);
             // 
             // btn_reportes
             // 

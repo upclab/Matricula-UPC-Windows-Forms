@@ -40,9 +40,11 @@ namespace MatriculaUPC
             proyecto = Program.ctx.Proyectoes.Find(ProyectoId);
             this.Text = "Equipo de " + proyecto.Nombre;
 
-            var lista = Program.ctx.DesarrolladorProyectoes.Where(x => x.ProyectoId == ProyectoId).AsEnumerable().Select(x => new
+            var lista = Program.ctx.DesarrolladorProyectoes.Where(x => x.ProyectoId == ProyectoId).AsEnumerable()
+                .OrderBy(x => x.Desarrollador.Apellido)
+                .ThenBy(x => x.Desarrollador.Nombre).Select(x => new
                 {
-                    FechaAsociacion = x.Fecha,
+                    FechaAsociacion = x.Fecha.Date,
                     SiglasDocumento = x.Desarrollador.TipoDocumento.Siglas,
                     NumeroDocumento = x.Desarrollador.NroDocumento,
                     NombreApellido = x.Desarrollador.Nombre + " " + x.Desarrollador.Apellido,

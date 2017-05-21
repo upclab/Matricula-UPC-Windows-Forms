@@ -72,6 +72,18 @@
     <Compile Include="frm_AsignarEquipo.Designer.cs">
       <DependentUpon>frm_AsignarEquipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Avance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Avance.Designer.cs">
+      <DependentUpon>frm_Avance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Avances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Avances.Designer.cs">
+      <DependentUpon>frm_Avances.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Desarrollador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +155,12 @@
     <Compile Include="Validators.cs" />
     <EmbeddedResource Include="frm_AsignarEquipo.resx">
       <DependentUpon>frm_AsignarEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Avance.resx">
+      <DependentUpon>frm_Avance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Avances.resx">
+      <DependentUpon>frm_Avances.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Desarrollador.resx">
       <DependentUpon>frm_Desarrollador.cs</DependentUpon>

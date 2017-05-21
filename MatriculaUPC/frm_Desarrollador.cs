@@ -18,6 +18,10 @@ namespace MatriculaUPC
         {
             InitializeComponent();
             combo_tipo_documento.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void frm_Desarrollador_Load(object sender, EventArgs e)
+        {
             var lista = Program.ctx.TipoDocumentoes.Select(x => x.Siglas).ToList();
             combo_tipo_documento.DataSource = lista;
         }
@@ -34,21 +38,26 @@ namespace MatriculaUPC
             return true;
         }
 
-        private void CerrarForm()
+        private void ActualizarOtrosFormularios()
         {
-            combo_tipo_documento.SelectedIndex = 0;
-            check_activo.Checked = false;
-            text_n_documento.Text = "";
-            text_nombre.Text = "";
-            text_apellido.Text = "";
-            desarollador = null;
-            this.Hide();
-            Program.frm_desarrolladores.Activate();
+            if (Program.frm_desarrolladores.Visible)
+            {
+                Program.frm_desarrolladores.RefrescarGrilla();
+            }
+
+            if (Program.frm_asignar_equipo.proyecto != null)
+            {
+                Program.frm_asignar_equipo.Preparar(Program.frm_asignar_equipo.proyecto.ProyectoId);
+            }
         }
 
-        private void btn_cancelar_Click(object sender, EventArgs e)
+        private void FormToElement()
         {
-            CerrarForm();
+            desarollador.TipoDocumentoId = Program.ctx.TipoDocumentoes.AsEnumerable().Where(x => x.Siglas == combo_tipo_documento.SelectedItem.ToString()).Select(x => x.TipoDocumentoId).First();
+            desarollador.Nombre = text_nombre.Text;
+            desarollador.Apellido = text_apellido.Text;
+            desarollador.NroDocumento = text_n_documento.Text;
+            desarollador.Estado = check_activo.Checked ? "ACT" : "INA";
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
@@ -60,26 +69,34 @@ namespace MatriculaUPC
                     MessageBox.Show("Por favor llene todos los datos correctamente!");
                     return;
                 }
-
                 desarollador = new Desarrollador();
-                desarollador.TipoDocumentoId = Program.ctx.TipoDocumentoes.AsEnumerable().Where(x => x.Siglas == combo_tipo_documento.SelectedItem.ToString()).Select(x => x.TipoDocumentoId).First();
-                desarollador.Nombre = text_nombre.Text;
-                desarollador.Apellido = text_apellido.Text;
-                desarollador.NroDocumento = text_n_documento.Text;
-                desarollador.Estado = check_activo.Checked ? "ACT" : "INA";
+                Program.ctx.Desarrolladors.Add(desarollador);
             }
 
-            Program.ctx.Desarrolladors.Add(desarollador);
             Program.ctx.SaveChanges();
- 
-            Program.frm_desarrolladores.RefrescarGrilla();
-
-            if (Program.frm_asignar_equipo.proyecto != null)
-            {
-                Program.frm_asignar_equipo.Preparar(Program.frm_asignar_equipo.proyecto.ProyectoId);
-            }
+            ActualizarOtrosFormularios();
 
             CerrarForm();
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            CerrarForm();
+        }
+
+        private void CerrarForm()
+        {
+            if (combo_tipo_documento.Items.Count > 0)
+            {
+                combo_tipo_documento.SelectedIndex = 0;
+            }
+            check_activo.Checked = false;
+            text_n_documento.Text = "";
+            text_nombre.Text = "";
+            text_apellido.Text = "";
+            desarollador = null;
+            this.Hide();
+            Program.frm_desarrolladores.Activate();
         }
     }
 }

@@ -19,8 +19,12 @@ namespace MatriculaUPC
             InitializeComponent();
             datepicker_finicio.Value = DateTime.Now;
             combo_desarrollador.DropDownStyle = ComboBoxStyle.DropDownList;
-            var lista = Program.ctx.Desarrolladors.Select(x => x.Nombre + " " + x.Apellido).ToList();
-            combo_desarrollador.DataSource = lista;
+        }
+
+        private void frm_Proyecto_Load(object sender, EventArgs e)
+        {
+            var desarrolladores = Program.ctx.Desarrolladors.Select(x => x.Nombre + " " + x.Apellido).ToList();
+            combo_desarrollador.DataSource = desarrolladores;
         }
 
         private bool CamposSonValidos()
@@ -62,6 +66,14 @@ namespace MatriculaUPC
             proyecto.EstaFinalizado = check_finalizado.Checked;
         }
 
+        private void ActualizarOtrosFormularios()
+        {
+            if (Program.frm_proyectos.Visible)
+            {
+                Program.frm_proyectos.RefrescarGrilla();
+            }
+        }
+
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             if (CamposSonValidos() == false)
@@ -83,7 +95,7 @@ namespace MatriculaUPC
 
             Program.ctx.SaveChanges();
 
-            Program.frm_proyectos.RefrescarGrilla();
+            ActualizarOtrosFormularios();
             CerrarForm();
         }
 
@@ -94,13 +106,17 @@ namespace MatriculaUPC
 
         private void CerrarForm()
         {
+            this.Hide();
             text_nombre.Text = "";
             text_descripcion.Text = "";
-            combo_desarrollador.SelectedIndex = 0;
+            if(combo_desarrollador.Items.Count > 0)
+            {
+                combo_desarrollador.SelectedIndex = 0;
+
+            }
             datepicker_finicio.Value = DateTime.Now;
             check_finalizado.Checked = false;
             proyecto = null;
-            this.Hide();
         }
     }
 }

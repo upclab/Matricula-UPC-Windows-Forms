@@ -76,6 +76,22 @@ namespace MatriculaUPC
                 }
             }
         }
+        private void ActualizarOtrosFormularios()
+        {
+            if (Program.frm_equipo.proyecto != null && Program.frm_equipo.proyecto.ProyectoId == proyecto.ProyectoId)
+            {
+                Program.frm_equipo.Preparar(proyecto.ProyectoId);
+            }
+        }
+
+        private void FormToElement(DesarrolladorProyecto dp = null)
+        {
+            int DesarrolladorID = Convert.ToInt32(datagridview.SelectedRows[0].Cells[0].Value);
+            dp.DesarrolladorId = DesarrolladorID;
+            dp.ProyectoId = proyecto.ProyectoId;
+            dp.Fecha = DateTime.Now;
+        }
+
 
         private void btn_asignar_Click(object sender, EventArgs e)
         {
@@ -84,24 +100,12 @@ namespace MatriculaUPC
                 MessageBox.Show("Por favor seleccione una fila!");
                 return;
             }
-
-            int DesarrolladorID = Convert.ToInt32(datagridview.SelectedRows[0].Cells[0].Value);
-
             DesarrolladorProyecto dp = new DesarrolladorProyecto();
-            dp.DesarrolladorId = DesarrolladorID;
-            dp.ProyectoId = proyecto.ProyectoId;
-            dp.Fecha = DateTime.Now;
 
             Program.ctx.DesarrolladorProyectoes.Add(dp);
-
             Program.ctx.SaveChanges();
 
             Preparar(proyecto.ProyectoId);
-
-            if (Program.frm_equipo.proyecto != null && Program.frm_equipo.proyecto.ProyectoId == proyecto.ProyectoId)
-            {
-                Program.frm_equipo.Preparar(proyecto.ProyectoId);
-            }
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
