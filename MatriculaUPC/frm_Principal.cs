@@ -20,12 +20,26 @@ namespace MatriculaUPC
 
         private void btn_desarrolladores_Click(object sender, EventArgs e)
         {
-            Program.frm_desarrolladores.Show();
+            try
+            {
+                Program.frm_desarrolladores.Show();
+            }
+            catch (Exception ex)
+            {
+                btn_desarrolladores_Click(sender, e);
+            }
         }
 
         private void btn_proyectos_Click(object sender, EventArgs e)
         {
-            Program.frm_proyectos.Show();
+            try
+            {
+                Program.frm_proyectos.Show();
+            }
+            catch (Exception ex)
+            {
+                btn_proyectos_Click(sender, e);
+            }
 
         }
     }

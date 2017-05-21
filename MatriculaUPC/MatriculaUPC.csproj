@@ -141,6 +141,9 @@
       <DependentUpon>MatriculaEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Validators.cs" />
+    <EmbeddedResource Include="frm_AsignarEquipo.resx">
+      <DependentUpon>frm_AsignarEquipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Desarrollador.resx">
       <DependentUpon>frm_Desarrollador.cs</DependentUpon>
     </EmbeddedResource>

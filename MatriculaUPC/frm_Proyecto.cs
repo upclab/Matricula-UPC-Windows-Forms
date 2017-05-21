@@ -33,16 +33,6 @@ namespace MatriculaUPC
             return true;
         }
 
-        private void CerrarForm()
-        {
-            text_nombre.Text = "";
-            text_descripcion.Text = "";
-            combo_desarrollador.SelectedIndex = 0;
-            datepicker_finicio.Value = DateTime.Now;
-            check_finalizado.Checked = false;
-            this.Hide();
-        }
-
         public void PrepararModoAgregar()
         {
             this.Text = "Agregar Proyecto";
@@ -61,11 +51,6 @@ namespace MatriculaUPC
             combo_desarrollador.SelectedItem = d.Nombre + " " + d.Apellido;
             datepicker_finicio.Value = proyecto.Fecha;
             check_finalizado.Checked = proyecto.EstaFinalizado;
-        }
-
-        private void btn_cancelar_Click(object sender, EventArgs e)
-        {
-            CerrarForm();
         }
 
         private void FormToElement()
@@ -100,6 +85,22 @@ namespace MatriculaUPC
 
             Program.frm_proyectos.RefrescarGrilla();
             CerrarForm();
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            CerrarForm();
+        }
+
+        private void CerrarForm()
+        {
+            text_nombre.Text = "";
+            text_descripcion.Text = "";
+            combo_desarrollador.SelectedIndex = 0;
+            datepicker_finicio.Value = DateTime.Now;
+            check_finalizado.Checked = false;
+            proyecto = null;
+            this.Hide();
         }
     }
 }

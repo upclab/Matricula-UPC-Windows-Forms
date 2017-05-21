@@ -74,7 +74,14 @@ namespace MatriculaUPC
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            Program.frm_desarrollador.Show();
+            try
+            {
+                Program.frm_desarrollador.Show();
+            }
+            catch (Exception ex)
+            {
+                btn_agregar_Click(sender, e);
+            }
         }
 
         private void btn_filtrar_Click(object sender, EventArgs e)

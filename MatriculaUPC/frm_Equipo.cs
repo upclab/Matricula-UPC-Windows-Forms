@@ -101,6 +101,7 @@ namespace MatriculaUPC
         public void Cerrar()
         {
             this.Hide();
+            proyecto = null;
             datagridview.DataSource = null;
             Program.frm_proyectos.Activate();
         }

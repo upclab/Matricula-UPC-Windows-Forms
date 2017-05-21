@@ -41,6 +41,7 @@ namespace MatriculaUPC
             text_n_documento.Text = "";
             text_nombre.Text = "";
             text_apellido.Text = "";
+            desarollador = null;
             this.Hide();
             Program.frm_desarrolladores.Activate();
         }
@@ -72,6 +73,12 @@ namespace MatriculaUPC
             Program.ctx.SaveChanges();
  
             Program.frm_desarrolladores.RefrescarGrilla();
+
+            if (Program.frm_asignar_equipo.proyecto != null)
+            {
+                Program.frm_asignar_equipo.Preparar(Program.frm_asignar_equipo.proyecto.ProyectoId);
+            }
+
             CerrarForm();
         }
     }
