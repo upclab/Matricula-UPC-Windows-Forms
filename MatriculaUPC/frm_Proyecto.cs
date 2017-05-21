@@ -98,7 +98,7 @@ namespace MatriculaUPC
 
             Program.ctx.SaveChanges();
 
-            frm_Principal.frm_proyectos.RefrescarGrilla();
+            Program.frm_proyectos.RefrescarGrilla();
             CerrarForm();
         }
     }

@@ -42,6 +42,7 @@ namespace MatriculaUPC
             text_nombre.Text = "";
             text_apellido.Text = "";
             this.Hide();
+            Program.frm_desarrolladores.Activate();
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
@@ -70,7 +71,7 @@ namespace MatriculaUPC
             Program.ctx.Desarrolladors.Add(desarollador);
             Program.ctx.SaveChanges();
  
-            frm_Principal.frm_desarrolladores.RefrescarGrilla();
+            Program.frm_desarrolladores.RefrescarGrilla();
             CerrarForm();
         }
     }

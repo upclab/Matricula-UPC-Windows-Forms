@@ -69,11 +69,12 @@ namespace MatriculaUPC
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Program.frm_principal.Activate();
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            frm_Principal.frm_desarrollador.Show();
+            Program.frm_desarrollador.Show();
         }
 
         private void btn_filtrar_Click(object sender, EventArgs e)

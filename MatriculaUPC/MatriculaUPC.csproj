@@ -66,6 +66,12 @@
     <Compile Include="DesarrolladorProyecto.cs">
       <DependentUpon>MatriculaEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="frm_AsignarEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AsignarEquipo.Designer.cs">
+      <DependentUpon>frm_AsignarEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Desarrollador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="frm_Desarrolladores.Designer.cs">
       <DependentUpon>frm_Desarrolladores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Equipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Equipo.Designer.cs">
+      <DependentUpon>frm_Equipo.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Principal.cs">
       <SubType>Form</SubType>
@@ -134,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Desarrolladores.resx">
       <DependentUpon>frm_Desarrolladores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Equipo.resx">
+      <DependentUpon>frm_Equipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Principal.resx">
       <DependentUpon>frm_Principal.cs</DependentUpon>

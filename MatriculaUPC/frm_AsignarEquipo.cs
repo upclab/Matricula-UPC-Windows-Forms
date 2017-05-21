@@ -10,23 +10,22 @@ using System.Windows.Forms;
 
 namespace MatriculaUPC
 {
-    public partial class frm_Principal : Form
+    public partial class frm_AsignarEquipo : Form
     {
-        public frm_Principal()
+        public frm_AsignarEquipo()
         {
             InitializeComponent();
-            
         }
 
-        private void btn_desarrolladores_Click(object sender, EventArgs e)
+        public void Preparar(int ProyectoId)
         {
-            Program.frm_desarrolladores.Show();
+
         }
 
-        private void btn_proyectos_Click(object sender, EventArgs e)
+        public void Cerrar()
         {
-            Program.frm_proyectos.Show();
-
+            this.Hide();
+            Program.frm_proyectos.Activate();
         }
     }
 }

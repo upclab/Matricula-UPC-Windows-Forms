@@ -44,7 +44,7 @@
             this.btn_filtrar.Location = new System.Drawing.Point(400, 14);
             this.btn_filtrar.Name = "btn_filtrar";
             this.btn_filtrar.Size = new System.Drawing.Size(75, 23);
-            this.btn_filtrar.TabIndex = 6;
+            this.btn_filtrar.TabIndex = 1;
             this.btn_filtrar.Text = "Filtrar";
             this.btn_filtrar.UseVisualStyleBackColor = true;
             this.btn_filtrar.Click += new System.EventHandler(this.btn_filtrar_Click);
@@ -54,14 +54,14 @@
             this.txt_filtro.Location = new System.Drawing.Point(12, 17);
             this.txt_filtro.Name = "txt_filtro";
             this.txt_filtro.Size = new System.Drawing.Size(382, 20);
-            this.txt_filtro.TabIndex = 5;
+            this.txt_filtro.TabIndex = 0;
             // 
             // btn_agregar
             // 
             this.btn_agregar.Location = new System.Drawing.Point(714, 342);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(75, 23);
-            this.btn_agregar.TabIndex = 7;
+            this.btn_agregar.TabIndex = 5;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
@@ -75,14 +75,14 @@
             this.datagridview.Name = "datagridview";
             this.datagridview.ReadOnly = true;
             this.datagridview.Size = new System.Drawing.Size(777, 282);
-            this.datagridview.TabIndex = 9;
+            this.datagridview.TabIndex = 6;
             // 
             // btn_cerrar
             // 
             this.btn_cerrar.Location = new System.Drawing.Point(714, 17);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
-            this.btn_cerrar.TabIndex = 8;
+            this.btn_cerrar.TabIndex = 7;
             this.btn_cerrar.Text = "Cerrar";
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
@@ -92,7 +92,7 @@
             this.btn_editar.Location = new System.Drawing.Point(633, 342);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(75, 23);
-            this.btn_editar.TabIndex = 10;
+            this.btn_editar.TabIndex = 4;
             this.btn_editar.Text = "Editar";
             this.btn_editar.UseVisualStyleBackColor = true;
             this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
@@ -102,18 +102,20 @@
             this.btn_ver_equipo.Location = new System.Drawing.Point(12, 342);
             this.btn_ver_equipo.Name = "btn_ver_equipo";
             this.btn_ver_equipo.Size = new System.Drawing.Size(75, 23);
-            this.btn_ver_equipo.TabIndex = 10;
+            this.btn_ver_equipo.TabIndex = 2;
             this.btn_ver_equipo.Text = "Ver Equipo";
             this.btn_ver_equipo.UseVisualStyleBackColor = true;
+            this.btn_ver_equipo.Click += new System.EventHandler(this.btn_ver_equipo_Click);
             // 
             // btn_asociar_equipo
             // 
             this.btn_asociar_equipo.Location = new System.Drawing.Point(93, 342);
             this.btn_asociar_equipo.Name = "btn_asociar_equipo";
             this.btn_asociar_equipo.Size = new System.Drawing.Size(90, 23);
-            this.btn_asociar_equipo.TabIndex = 10;
+            this.btn_asociar_equipo.TabIndex = 3;
             this.btn_asociar_equipo.Text = "Asociar Equipo";
             this.btn_asociar_equipo.UseVisualStyleBackColor = true;
+            this.btn_asociar_equipo.Click += new System.EventHandler(this.btn_asociar_equipo_Click);
             // 
             // frm_Proyectos
             // 

@@ -46,7 +46,7 @@ namespace MatriculaUPC
                     Nombre = x.Nombre,
                     DesarrolladorReponsable = x.Desarrollador.Nombre + " " + x.Desarrollador.Apellido,
                     PorcentajeAcumulado = GetAvance(x.ProyectoId),
-                    HorasTotales = GetAvance(x.ProyectoId),
+                    HorasTotales = GetHoras(x.ProyectoId),
                 }).ToList();
             }
 
@@ -93,15 +93,10 @@ namespace MatriculaUPC
             }
         }
 
-        private void btn_cerrar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            frm_Principal.frm_proyecto.PrepararModoAgregar();
-            frm_Principal.frm_proyecto.Show();
+            Program.frm_proyecto.PrepararModoAgregar();
+            Program.frm_proyecto.Show();
         }
 
         private void btn_editar_Click(object sender, EventArgs e)
@@ -112,8 +107,8 @@ namespace MatriculaUPC
                 return;
             }
 
-            frm_Principal.frm_proyecto.PrepararModoEditar(Convert.ToInt32(datagridview.SelectedRows[0].Cells[0].Value));
-            frm_Principal.frm_proyecto.Show();
+            Program.frm_proyecto.PrepararModoEditar(Convert.ToInt32(datagridview.SelectedRows[0].Cells[0].Value));
+            Program.frm_proyecto.Show();
         }
 
         private void btn_filtrar_Click(object sender, EventArgs e)
@@ -133,11 +128,41 @@ namespace MatriculaUPC
                         Nombre = x.Nombre,
                         DesarrolladorReponsable = x.Desarrollador.Nombre + " " + x.Desarrollador.Apellido,
                         PorcentajeAcumulado = GetAvance(x.ProyectoId),
-                        HorasTotales = GetAvance(x.ProyectoId),
+                        HorasTotales = GetHoras(x.ProyectoId),
                     }).ToList();
             }
 
             RefrescarGrilla(lista);
-        }        
+        }
+
+        private void btn_ver_equipo_Click(object sender, EventArgs e)
+        {
+            if (datagridview.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Por favor seleccione una fila!");
+                return;
+            }
+
+            Program.frm_equipo.Preparar(Convert.ToInt32(datagridview.SelectedRows[0].Cells[0].Value));
+            Program.frm_equipo.Show();
+        }
+
+        private void btn_asociar_equipo_Click(object sender, EventArgs e)
+        {
+            if (datagridview.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Por favor seleccione una fila!");
+                return;
+            }
+
+            Program.frm_asignar_equipo.Preparar(Convert.ToInt32(datagridview.SelectedRows[0].Cells[0].Value));
+            Program.frm_asignar_equipo.Show();
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.frm_principal.Activate();
+        }
     }
 }
