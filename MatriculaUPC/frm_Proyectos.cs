@@ -10,54 +10,81 @@ using System.Windows.Forms;
 
 namespace MatriculaUPC
 {
-    public partial class frm_Desarrolladores : Form
+    public partial class frm_Proyectos : Form
     {
-        public frm_Desarrolladores()
+        public frm_Proyectos()
         {
             InitializeComponent();
             RefrescarGrilla();
+        }
+
+        private decimal GetAvance(int ProyectoId)
+        {
+            decimal avance = 0;
+            avance = Convert.ToDecimal(Program.ctx.Avances.Where(x => x.ProyectoId == ProyectoId).AsEnumerable().Sum(o => o.Porcentaje));
+
+            return avance;
+        }
+
+        private decimal GetHoras(int ProyectoId)
+        {
+            decimal horas = 0;
+            horas = Convert.ToDecimal(Program.ctx.Avances.Where(x => x.ProyectoId == ProyectoId).AsEnumerable().Sum(o => o.Horas));
+
+            return horas;
         }
 
         public void RefrescarGrilla(object lista = null)
         {
             if (lista == null)
             {
-                lista = Program.ctx.Desarrolladors.Select(x => new
-                    {
-                        DesarrolladorId = x.DesarrolladorId,
-                        SiglasDeDocumento = x.TipoDocumento.Siglas,
-                        NroDocumento = x.NroDocumento,
-                        Nombre = x.Nombre,
-                        Apellido = x.Apellido,
-                    }).ToList();
+                lista = Program.ctx.Proyectoes.AsEnumerable().Select(x => new
+                {
+                    ProyectoId = x.ProyectoId,
+                    Finalizado = x.EstaFinalizado,
+                    Fecha = x.Fecha,
+                    Nombre = x.Nombre,
+                    DesarrolladorReponsable = x.Desarrollador.Nombre + " " + x.Desarrollador.Apellido,
+                    PorcentajeAcumulado = GetAvance(x.ProyectoId),
+                    HorasTotales = GetAvance(x.ProyectoId),
+                }).ToList();
             }
-            
-            dataGridView1.DataSource = lista;
 
-            foreach (DataGridViewColumn col in dataGridView1.Columns)
+            datagridview.DataSource = lista;
+
+            foreach (DataGridViewColumn col in datagridview.Columns)
             {
                 switch (col.Name)
                 {
-                    case "DesarrolladorId":
+                    case "ProyectoId":
                         col.Visible = false;
                         break;
-                    case "SiglasDeDocumento":
-                        col.HeaderText = "Siglas de Documento";
+                    case "Finalizado":
                         col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                        col.FillWeight = 15;
+                        col.FillWeight = 20;
                         break;
-                    case "NroDocumento":
-                        col.HeaderText = "Nro de Documento";
+                    case "Fecha":
                         col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                        col.FillWeight = 30;
+                        col.FillWeight = 20;
                         break;
                     case "Nombre":
                         col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                         col.FillWeight = 50;
                         break;
-                    case "Apellido":
+                    case "DesarrolladorReponsable":
+                        col.HeaderText = "Desarrollador Responsable";
                         col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                        col.FillWeight = 50;
+                        col.FillWeight = 100;
+                        break;
+                    case "PorcentajeAcumulado":
+                        col.HeaderText = "Porcentaje acumulado";
+                        col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        col.FillWeight = 30;
+                        break;
+                    case "HorasTotales":
+                        col.HeaderText = "Horas Totales";
+                        col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        col.FillWeight = 30;
                         break;
                     default:
                         col.Visible = false;
@@ -73,7 +100,20 @@ namespace MatriculaUPC
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            frm_Principal.frm_desarrollador.Show();
+            frm_Principal.frm_proyecto.PrepararModoAgregar();
+            frm_Principal.frm_proyecto.Show();
+        }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            if (datagridview.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Por favor seleccione la fila que desea editar!");
+                return;
+            }
+
+            frm_Principal.frm_proyecto.PrepararModoEditar(Convert.ToInt32(datagridview.SelectedRows[0].Cells[0].Value));
+            frm_Principal.frm_proyecto.Show();
         }
 
         private void btn_filtrar_Click(object sender, EventArgs e)
@@ -81,20 +121,23 @@ namespace MatriculaUPC
             String texto = txt_filtro.Text;
             object lista = null;
 
-            if  (texto.Replace(" ", String.Empty) != "")
+            if (Validators.TextoVacio(texto) == false)
             {
-                lista = Program.ctx.Desarrolladors
-                    .Where(x => x.Nombre.Contains(texto) || texto.Contains(x.Nombre) || x.Apellido.Contains(texto) || texto.Contains(x.Apellido))
-                    .Select(x => new {
-                        DesarrolladorId = x.DesarrolladorId,
-                        SiglasDeDocumento = x.TipoDocumento.Siglas,
-                        NroDocumento = x.NroDocumento,
+                lista = Program.ctx.Proyectoes
+                    .Where(x => x.Nombre.Contains(texto) || texto.Contains(x.Nombre) || x.Descripcion.Contains(texto) || texto.Contains(x.Descripcion))
+                    .AsEnumerable().Select(x => new
+                    {
+                        ProyectoId = x.ProyectoId,
+                        Finalizado = x.EstaFinalizado,
+                        Fecha = x.Fecha,
                         Nombre = x.Nombre,
-                        Apellido = x.Apellido,
+                        DesarrolladorReponsable = x.Desarrollador.Nombre + " " + x.Desarrollador.Apellido,
+                        PorcentajeAcumulado = GetAvance(x.ProyectoId),
+                        HorasTotales = GetAvance(x.ProyectoId),
                     }).ToList();
             }
 
             RefrescarGrilla(lista);
-        }
+        }        
     }
 }

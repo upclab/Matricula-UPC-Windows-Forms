@@ -52,6 +52,7 @@
             this.btn_proyectos.TabIndex = 1;
             this.btn_proyectos.Text = "Proyectos";
             this.btn_proyectos.UseVisualStyleBackColor = true;
+            this.btn_proyectos.Click += new System.EventHandler(this.btn_proyectos_Click);
             // 
             // btn_avance
             // 

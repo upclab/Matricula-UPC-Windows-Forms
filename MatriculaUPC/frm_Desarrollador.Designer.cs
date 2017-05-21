@@ -137,7 +137,7 @@
             this.check_activo.Name = "check_activo";
             this.check_activo.Size = new System.Drawing.Size(56, 17);
             this.check_activo.TabIndex = 5;
-            this.check_activo.Text = "Acrivo";
+            this.check_activo.Text = "Activo";
             this.check_activo.UseVisualStyleBackColor = true;
             // 
             // frm_Desarrollador

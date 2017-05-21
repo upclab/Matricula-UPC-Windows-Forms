@@ -1,6 +1,6 @@
 ﻿namespace MatriculaUPC
 {
-    partial class frm_Desarrolladores
+    partial class frm_Proyectos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,79 +28,111 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_cerrar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_agregar = new System.Windows.Forms.Button();
-            this.txt_filtro = new System.Windows.Forms.TextBox();
             this.btn_filtrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txt_filtro = new System.Windows.Forms.TextBox();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.datagridview = new System.Windows.Forms.DataGridView();
+            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.btn_ver_equipo = new System.Windows.Forms.Button();
+            this.btn_asociar_equipo = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridview)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.Location = new System.Drawing.Point(714, 12);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
-            this.btn_cerrar.TabIndex = 3;
-            this.btn_cerrar.Text = "Cerrar";
-            this.btn_cerrar.UseVisualStyleBackColor = true;
-            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(777, 282);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.Location = new System.Drawing.Point(714, 337);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(75, 23);
-            this.btn_agregar.TabIndex = 2;
-            this.btn_agregar.Text = "Agregar";
-            this.btn_agregar.UseVisualStyleBackColor = true;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
-            // 
-            // txt_filtro
-            // 
-            this.txt_filtro.Location = new System.Drawing.Point(12, 12);
-            this.txt_filtro.Name = "txt_filtro";
-            this.txt_filtro.Size = new System.Drawing.Size(382, 20);
-            this.txt_filtro.TabIndex = 0;
             // 
             // btn_filtrar
             // 
-            this.btn_filtrar.Location = new System.Drawing.Point(400, 9);
+            this.btn_filtrar.Location = new System.Drawing.Point(400, 14);
             this.btn_filtrar.Name = "btn_filtrar";
             this.btn_filtrar.Size = new System.Drawing.Size(75, 23);
-            this.btn_filtrar.TabIndex = 1;
+            this.btn_filtrar.TabIndex = 6;
             this.btn_filtrar.Text = "Filtrar";
             this.btn_filtrar.UseVisualStyleBackColor = true;
             this.btn_filtrar.Click += new System.EventHandler(this.btn_filtrar_Click);
             // 
-            // frm_Desarrolladores
+            // txt_filtro
+            // 
+            this.txt_filtro.Location = new System.Drawing.Point(12, 17);
+            this.txt_filtro.Name = "txt_filtro";
+            this.txt_filtro.Size = new System.Drawing.Size(382, 20);
+            this.txt_filtro.TabIndex = 5;
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.Location = new System.Drawing.Point(714, 342);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(75, 23);
+            this.btn_agregar.TabIndex = 7;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
+            // datagridview
+            // 
+            this.datagridview.AllowUserToAddRows = false;
+            this.datagridview.AllowUserToDeleteRows = false;
+            this.datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridview.Location = new System.Drawing.Point(12, 54);
+            this.datagridview.Name = "datagridview";
+            this.datagridview.ReadOnly = true;
+            this.datagridview.Size = new System.Drawing.Size(777, 282);
+            this.datagridview.TabIndex = 9;
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.Location = new System.Drawing.Point(714, 17);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cerrar.TabIndex = 8;
+            this.btn_cerrar.Text = "Cerrar";
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
+            // btn_editar
+            // 
+            this.btn_editar.Location = new System.Drawing.Point(633, 342);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(75, 23);
+            this.btn_editar.TabIndex = 10;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
+            // 
+            // btn_ver_equipo
+            // 
+            this.btn_ver_equipo.Location = new System.Drawing.Point(12, 342);
+            this.btn_ver_equipo.Name = "btn_ver_equipo";
+            this.btn_ver_equipo.Size = new System.Drawing.Size(75, 23);
+            this.btn_ver_equipo.TabIndex = 10;
+            this.btn_ver_equipo.Text = "Ver Equipo";
+            this.btn_ver_equipo.UseVisualStyleBackColor = true;
+            // 
+            // btn_asociar_equipo
+            // 
+            this.btn_asociar_equipo.Location = new System.Drawing.Point(93, 342);
+            this.btn_asociar_equipo.Name = "btn_asociar_equipo";
+            this.btn_asociar_equipo.Size = new System.Drawing.Size(90, 23);
+            this.btn_asociar_equipo.TabIndex = 10;
+            this.btn_asociar_equipo.Text = "Asociar Equipo";
+            this.btn_asociar_equipo.UseVisualStyleBackColor = true;
+            // 
+            // frm_Proyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 381);
+            this.ClientSize = new System.Drawing.Size(805, 374);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_asociar_equipo);
+            this.Controls.Add(this.btn_ver_equipo);
+            this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_filtrar);
             this.Controls.Add(this.txt_filtro);
             this.Controls.Add(this.btn_agregar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.datagridview);
             this.Controls.Add(this.btn_cerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frm_Desarrolladores";
-            this.Text = "Desarrolladores";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Name = "frm_Proyectos";
+            this.Text = "Proyectos";
+            ((System.ComponentModel.ISupportInitialize)(this.datagridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,10 +140,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_cerrar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btn_agregar;
-        private System.Windows.Forms.TextBox txt_filtro;
         private System.Windows.Forms.Button btn_filtrar;
+        private System.Windows.Forms.TextBox txt_filtro;
+        private System.Windows.Forms.Button btn_agregar;
+        private System.Windows.Forms.DataGridView datagridview;
+        private System.Windows.Forms.Button btn_cerrar;
+        private System.Windows.Forms.Button btn_editar;
+        private System.Windows.Forms.Button btn_ver_equipo;
+        private System.Windows.Forms.Button btn_asociar_equipo;
     }
 }

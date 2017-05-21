@@ -81,7 +81,7 @@ namespace MatriculaUPC
             String texto = txt_filtro.Text;
             object lista = null;
 
-            if  (texto.Replace(" ", String.Empty) != "")
+            if  (Validators.TextoVacio(texto) == false)
             {
                 lista = Program.ctx.Desarrolladors
                     .Where(x => x.Nombre.Contains(texto) || texto.Contains(x.Nombre) || x.Apellido.Contains(texto) || texto.Contains(x.Apellido))

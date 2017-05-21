@@ -10,7 +10,7 @@ namespace MatriculaUPC
     {
         public static bool TextoVacio(String texto)
         {
-            return (texto.Replace(" ", String.Empty) == "");
+            return (texto.Replace(" ", String.Empty).Replace(System.Environment.NewLine, String.Empty) == "");
         }
     }
 }

@@ -13,7 +13,6 @@ namespace MatriculaUPC
     public partial class frm_Desarrollador : Form
     {
         private Desarrollador desarollador = null;
-        private List<TipoDocumento> documentos;
 
         public frm_Desarrollador()
         {
@@ -21,7 +20,6 @@ namespace MatriculaUPC
             combo_tipo_documento.DropDownStyle = ComboBoxStyle.DropDownList;
             var lista = Program.ctx.TipoDocumentoes.Select(x => x.Siglas).ToList();
             combo_tipo_documento.DataSource = lista;
-            documentos = Program.ctx.TipoDocumentoes.ToList();
         }
 
         private bool CamposSonValidos()
@@ -62,15 +60,7 @@ namespace MatriculaUPC
                 }
 
                 desarollador = new Desarrollador();
-                foreach (var documento in documentos)
-                {
-                    if (combo_tipo_documento.SelectedItem.ToString() == documento.Siglas)
-                    {
-                        desarollador.TipoDocumentoId = documento.TipoDocumentoId;
-                        break;
-                    }
-
-                }
+                desarollador.TipoDocumentoId = Program.ctx.TipoDocumentoes.AsEnumerable().Where(x => x.Siglas == combo_tipo_documento.SelectedItem.ToString()).Select(x => x.TipoDocumentoId).First();
                 desarollador.Nombre = text_nombre.Text;
                 desarollador.Apellido = text_apellido.Text;
                 desarollador.NroDocumento = text_n_documento.Text;
