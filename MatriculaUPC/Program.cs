@@ -8,6 +8,8 @@ namespace MatriculaUPC
 {
     static class Program
     {
+        public static PC1_Web_20171Entities1 ctx = new PC1_Web_20171Entities1();
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

@@ -44,6 +44,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +57,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avance.cs">
+      <DependentUpon>MatriculaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Desarrollador.cs">
+      <DependentUpon>MatriculaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DesarrolladorProyecto.cs">
+      <DependentUpon>MatriculaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Desarrollador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Desarrollador.Designer.cs">
+      <DependentUpon>frm_Desarrollador.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Desarrolladores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +84,42 @@
     <Compile Include="frm_Principal.Designer.cs">
       <DependentUpon>frm_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="MatriculaEntity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MatriculaEntity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MatriculaEntity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MatriculaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MatriculaEntity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MatriculaEntity.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proyecto.cs">
+      <DependentUpon>MatriculaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>MatriculaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>MatriculaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>MatriculaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoDocumento.cs">
+      <DependentUpon>MatriculaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Validators.cs" />
+    <EmbeddedResource Include="frm_Desarrollador.resx">
+      <DependentUpon>frm_Desarrollador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Desarrolladores.resx">
       <DependentUpon>frm_Desarrolladores.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +135,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="MatriculaEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MatriculaEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MatriculaEntity.edmx.diagram">
+      <DependentUpon>MatriculaEntity.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -97,6 +155,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MatriculaEntity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MatriculaEntity.edmx</DependentUpon>
+      <LastGenOutput>MatriculaEntity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MatriculaEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MatriculaEntity.edmx</DependentUpon>
+      <LastGenOutput>MatriculaEntity.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

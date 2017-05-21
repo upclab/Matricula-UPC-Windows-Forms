@@ -12,17 +12,19 @@ namespace MatriculaUPC
 {
     public partial class frm_Principal : Form
     {
-        public static frm_Desarrolladores frm_desarrollares;
+        public static frm_Desarrolladores frm_desarrolladores;
+        public static frm_Desarrollador frm_desarrollador;
 
         public frm_Principal()
         {
             InitializeComponent();
-            frm_desarrollares = new frm_Desarrolladores();
+            frm_desarrolladores = new frm_Desarrolladores();
+            frm_desarrollador = new frm_Desarrollador();
         }
 
         private void btn_desarrolladores_Click(object sender, EventArgs e)
         {
-            frm_desarrollares.Show();
+            frm_desarrolladores.Show();
         }
     }
 }

@@ -48,6 +48,16 @@
           <Property Name="DesarrolladorReponsableId" Type="int" Nullable="false" />
           <Property Name="EstaFinalizado" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="TipoDocumento">
           <Key>
             <PropertyRef Name="TipoDocumentoId" />
@@ -164,6 +174,7 @@
           <EntitySet Name="Desarrollador" EntityType="Self.Desarrollador" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DesarrolladorProyecto" EntityType="Self.DesarrolladorProyecto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Proyecto" EntityType="Self.Proyecto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TipoDocumento" EntityType="Self.TipoDocumento" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Avance_Desarrollador" Association="Self.FK_Avance_Desarrollador">
             <End Role="Desarrollador" EntitySet="Desarrollador" />
@@ -249,6 +260,16 @@
           <NavigationProperty Name="Desarrollador" Relationship="Self.FK_Proyecto_Desarrollador" FromRole="Proyecto" ToRole="Desarrollador" />
           <NavigationProperty Name="DesarrolladorProyectoes" Relationship="Self.FK_DesarrolladorProyecto_Proyecto" FromRole="Proyecto" ToRole="DesarrolladorProyecto" />
         </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <EntityType Name="TipoDocumento">
           <Key>
             <PropertyRef Name="TipoDocumentoId" />
@@ -330,11 +351,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PC1_Web_20171Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PC1_Web_20171Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Avances" EntityType="Self.Avance" />
           <EntitySet Name="Desarrolladors" EntityType="Self.Desarrollador" />
           <EntitySet Name="DesarrolladorProyectoes" EntityType="Self.DesarrolladorProyecto" />
           <EntitySet Name="Proyectoes" EntityType="Self.Proyecto" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TipoDocumentoes" EntityType="Self.TipoDocumento" />
           <AssociationSet Name="FK_Avance_Desarrollador" Association="Self.FK_Avance_Desarrollador">
             <End Role="Desarrollador" EntitySet="Desarrolladors" />
@@ -407,7 +429,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PC1_Web_20171ModelStoreContainer" CdmEntityContainer="PC1_Web_20171Entities">
+        <EntityContainerMapping StorageEntityContainer="PC1_Web_20171ModelStoreContainer" CdmEntityContainer="PC1_Web_20171Entities1">
           <EntitySetMapping Name="Avances">
             <EntityTypeMapping TypeName="PC1_Web_20171Model.Avance">
               <MappingFragment StoreEntitySet="Avance">
@@ -452,6 +474,17 @@
                 <ScalarProperty Name="Fecha" ColumnName="Fecha" />
                 <ScalarProperty Name="DesarrolladorReponsableId" ColumnName="DesarrolladorReponsableId" />
                 <ScalarProperty Name="EstaFinalizado" ColumnName="EstaFinalizado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="PC1_Web_20171Model.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
