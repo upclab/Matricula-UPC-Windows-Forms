@@ -106,6 +106,47 @@ namespace MatriculaUPC
                 .ToList();
 
             dgv_proyectos.DataSource = proyectos;
+
+            foreach (DataGridViewColumn col in dgv_proyectos.Columns)
+            {
+                switch (col.Name)
+                {
+                    case "Finalizado":
+                        col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        col.FillWeight = 20;
+                        break;
+                    case "FechaDeInicio":
+                        col.HeaderText = "Fecha De Inicio";
+                        col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        col.FillWeight = 30;
+                        break;
+                    case "Nombre":
+                        col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        col.FillWeight = 30;
+                        break;
+                    case "Avance":
+                        col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        col.FillWeight = 20;
+                        break;
+                    case "Desarrolladores":
+                        col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        col.FillWeight = 30;
+                        break;
+                    case "UltimaFecha":
+                        col.HeaderText = "Ultima Fecha";
+                        col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        col.FillWeight = 30;
+                        break;
+                    case "UltimoDesarrollador":
+                        col.HeaderText = "Ultima Desarrollador";
+                        col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        col.FillWeight = 30;
+                        break;
+                    default:
+                        col.Visible = false;
+                        break;
+                }
+            }
         }
 
         private void CerrarForm()
