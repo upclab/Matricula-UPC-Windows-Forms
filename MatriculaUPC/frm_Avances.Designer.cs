@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Avances));
             this.btn_registrar = new System.Windows.Forms.Button();
             this.datagridview = new System.Windows.Forms.DataGridView();
             this.btn_cerrar = new System.Windows.Forms.Button();
@@ -93,6 +94,7 @@
             this.Controls.Add(this.datagridview);
             this.Controls.Add(this.btn_cerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Avances";
             this.Text = "Avances";
             ((System.ComponentModel.ISupportInitialize)(this.datagridview)).EndInit();

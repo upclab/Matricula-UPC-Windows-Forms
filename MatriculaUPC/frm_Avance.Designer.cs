@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Avance));
             this.text_descripcion = new System.Windows.Forms.TextBox();
             this.text_avance = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -174,6 +175,7 @@
             this.Controls.Add(this.btn_registrar);
             this.Controls.Add(this.btn_cancelar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Avance";
             this.Text = "Registrar Avance";
             this.Load += new System.EventHandler(this.frm_Avance_Load);

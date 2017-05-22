@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Proyectos));
             this.btn_filtrar = new System.Windows.Forms.Button();
             this.txt_filtro = new System.Windows.Forms.TextBox();
             this.btn_agregar = new System.Windows.Forms.Button();
@@ -158,6 +159,7 @@
             this.Controls.Add(this.datagridview);
             this.Controls.Add(this.btn_cerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Proyectos";
             this.Text = "Proyectos";
             ((System.ComponentModel.ISupportInitialize)(this.datagridview)).EndInit();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AsignarEquipo));
             this.datagridview = new System.Windows.Forms.DataGridView();
             this.btn_asignar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
@@ -79,6 +80,7 @@
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.datagridview);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_AsignarEquipo";
             this.Text = "Asignar Desarrollador";
             ((System.ComponentModel.ISupportInitialize)(this.datagridview)).EndInit();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Principal));
             this.btn_desarrolladores = new System.Windows.Forms.Button();
             this.btn_proyectos = new System.Windows.Forms.Button();
             this.btn_reportes = new System.Windows.Forms.Button();
@@ -72,6 +73,7 @@
             this.Controls.Add(this.btn_proyectos);
             this.Controls.Add(this.btn_desarrolladores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Principal";
             this.Text = "Menu Principal";
             this.ResumeLayout(false);

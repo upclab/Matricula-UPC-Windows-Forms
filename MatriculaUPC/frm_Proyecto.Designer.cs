@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Proyecto));
             this.check_finalizado = new System.Windows.Forms.CheckBox();
             this.text_nombre = new System.Windows.Forms.TextBox();
             this.text_descripcion = new System.Windows.Forms.TextBox();
@@ -163,6 +164,7 @@
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.btn_cancelar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Proyecto";
             this.Text = "Agregar Proyecto";
             this.Load += new System.EventHandler(this.frm_Proyecto_Load);

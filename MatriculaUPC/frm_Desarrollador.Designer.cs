@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Desarrollador));
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.combo_tipo_documento = new System.Windows.Forms.ComboBox();
@@ -162,6 +163,7 @@
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.btn_cancelar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Desarrollador";
             this.Text = "Agregar Desarrollador";
             this.Load += new System.EventHandler(this.frm_Desarrollador_Load);

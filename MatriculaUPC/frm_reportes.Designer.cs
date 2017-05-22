@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Reportes));
             this.dgv_responsables = new System.Windows.Forms.DataGridView();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -115,6 +116,7 @@
             this.Controls.Add(this.dgv_responsables);
             this.Controls.Add(this.btn_cerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Reportes";
             this.Text = "Reportes";
             this.Load += new System.EventHandler(this.frm_Reportes_Load);
