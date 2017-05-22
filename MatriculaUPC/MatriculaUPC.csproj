@@ -197,6 +197,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="MatriculaEntity.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -233,6 +234,18 @@
       <DependentUpon>MatriculaEntity.edmx</DependentUpon>
       <LastGenOutput>MatriculaEntity.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\add.png" />
+    <None Include="Resources\salir.png" />
+    <None Include="Resources\registrar.png" />
+    <None Include="Resources\guardar.png" />
+    <None Include="Resources\filtrar.png" />
+    <None Include="Resources\equipo.png" />
+    <None Include="Resources\editar.png" />
+    <None Include="Resources\cancelar.png" />
+    <None Include="Resources\avance_delete.png" />
+    <None Include="Resources\avance_add.png" />
+    <None Include="Resources\avance.png" />
+    <None Include="Resources\asociar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

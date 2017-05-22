@@ -37,11 +37,13 @@
             // 
             // btn_registrar
             // 
+            this.btn_registrar.Image = global::MatriculaUPC.Properties.Resources.avance_add;
             this.btn_registrar.Location = new System.Drawing.Point(714, 343);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Size = new System.Drawing.Size(75, 23);
             this.btn_registrar.TabIndex = 0;
             this.btn_registrar.Text = "Registrar";
+            this.btn_registrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_registrar.UseVisualStyleBackColor = true;
             this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
@@ -58,21 +60,25 @@
             // 
             // btn_cerrar
             // 
+            this.btn_cerrar.Image = global::MatriculaUPC.Properties.Resources.salir;
             this.btn_cerrar.Location = new System.Drawing.Point(714, 13);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
             this.btn_cerrar.TabIndex = 2;
             this.btn_cerrar.Text = "Cerrar";
+            this.btn_cerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // btn_eliminar
             // 
+            this.btn_eliminar.Image = global::MatriculaUPC.Properties.Resources.avance_delete;
             this.btn_eliminar.Location = new System.Drawing.Point(633, 343);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(75, 23);
             this.btn_eliminar.TabIndex = 1;
             this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 

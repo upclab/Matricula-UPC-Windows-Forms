@@ -108,21 +108,25 @@
             // 
             // btn_registrar
             // 
-            this.btn_registrar.Location = new System.Drawing.Point(169, 234);
+            this.btn_registrar.Image = global::MatriculaUPC.Properties.Resources.guardar;
+            this.btn_registrar.Location = new System.Drawing.Point(162, 234);
             this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_registrar.Size = new System.Drawing.Size(82, 23);
             this.btn_registrar.TabIndex = 5;
             this.btn_registrar.Text = "Registrar";
+            this.btn_registrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_registrar.UseVisualStyleBackColor = true;
             this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
             // btn_cancelar
             // 
+            this.btn_cancelar.Image = global::MatriculaUPC.Properties.Resources.cancelar;
             this.btn_cancelar.Location = new System.Drawing.Point(266, 234);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
             this.btn_cancelar.TabIndex = 6;
             this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 

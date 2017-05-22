@@ -51,11 +51,13 @@
             // 
             // btn_cerrar
             // 
+            this.btn_cerrar.Image = global::MatriculaUPC.Properties.Resources.salir;
             this.btn_cerrar.Location = new System.Drawing.Point(714, 12);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
             this.btn_cerrar.TabIndex = 2;
             this.btn_cerrar.Text = "Cerrar";
+            this.btn_cerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 

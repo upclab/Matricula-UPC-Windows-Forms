@@ -42,11 +42,13 @@
             // 
             // btn_filtrar
             // 
+            this.btn_filtrar.Image = global::MatriculaUPC.Properties.Resources.filtrar;
             this.btn_filtrar.Location = new System.Drawing.Point(400, 14);
             this.btn_filtrar.Name = "btn_filtrar";
             this.btn_filtrar.Size = new System.Drawing.Size(75, 23);
             this.btn_filtrar.TabIndex = 3;
             this.btn_filtrar.Text = "Filtrar";
+            this.btn_filtrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_filtrar.UseVisualStyleBackColor = true;
             this.btn_filtrar.Click += new System.EventHandler(this.btn_filtrar_Click);
             // 
@@ -59,11 +61,13 @@
             // 
             // btn_agregar
             // 
+            this.btn_agregar.Image = global::MatriculaUPC.Properties.Resources.registrar;
             this.btn_agregar.Location = new System.Drawing.Point(714, 342);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(75, 23);
             this.btn_agregar.TabIndex = 0;
             this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
@@ -80,51 +84,61 @@
             // 
             // btn_cerrar
             // 
+            this.btn_cerrar.Image = global::MatriculaUPC.Properties.Resources.salir;
             this.btn_cerrar.Location = new System.Drawing.Point(714, 17);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
             this.btn_cerrar.TabIndex = 7;
             this.btn_cerrar.Text = "Cerrar";
+            this.btn_cerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // btn_editar
             // 
+            this.btn_editar.Image = global::MatriculaUPC.Properties.Resources.editar;
             this.btn_editar.Location = new System.Drawing.Point(633, 342);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(75, 23);
             this.btn_editar.TabIndex = 1;
             this.btn_editar.Text = "Editar";
+            this.btn_editar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_editar.UseVisualStyleBackColor = true;
             this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_ver_equipo
             // 
+            this.btn_ver_equipo.Image = global::MatriculaUPC.Properties.Resources.equipo;
             this.btn_ver_equipo.Location = new System.Drawing.Point(12, 342);
             this.btn_ver_equipo.Name = "btn_ver_equipo";
-            this.btn_ver_equipo.Size = new System.Drawing.Size(75, 23);
+            this.btn_ver_equipo.Size = new System.Drawing.Size(93, 23);
             this.btn_ver_equipo.TabIndex = 4;
             this.btn_ver_equipo.Text = "Ver Equipo";
+            this.btn_ver_equipo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ver_equipo.UseVisualStyleBackColor = true;
             this.btn_ver_equipo.Click += new System.EventHandler(this.btn_ver_equipo_Click);
             // 
             // btn_asociar_equipo
             // 
-            this.btn_asociar_equipo.Location = new System.Drawing.Point(93, 342);
+            this.btn_asociar_equipo.Image = global::MatriculaUPC.Properties.Resources.asociar;
+            this.btn_asociar_equipo.Location = new System.Drawing.Point(116, 342);
             this.btn_asociar_equipo.Name = "btn_asociar_equipo";
-            this.btn_asociar_equipo.Size = new System.Drawing.Size(90, 23);
+            this.btn_asociar_equipo.Size = new System.Drawing.Size(107, 23);
             this.btn_asociar_equipo.TabIndex = 5;
             this.btn_asociar_equipo.Text = "Asociar Equipo";
+            this.btn_asociar_equipo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_asociar_equipo.UseVisualStyleBackColor = true;
             this.btn_asociar_equipo.Click += new System.EventHandler(this.btn_asociar_equipo_Click);
             // 
             // btn_avances
             // 
-            this.btn_avances.Location = new System.Drawing.Point(189, 342);
+            this.btn_avances.Image = global::MatriculaUPC.Properties.Resources.avance;
+            this.btn_avances.Location = new System.Drawing.Point(229, 342);
             this.btn_avances.Name = "btn_avances";
             this.btn_avances.Size = new System.Drawing.Size(101, 23);
             this.btn_avances.TabIndex = 6;
             this.btn_avances.Text = "Ver Avances";
+            this.btn_avances.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_avances.UseVisualStyleBackColor = true;
             this.btn_avances.Click += new System.EventHandler(this.btn_avances_Click);
             // 

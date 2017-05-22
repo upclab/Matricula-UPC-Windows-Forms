@@ -28,21 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_cerrar = new System.Windows.Forms.Button();
             this.datagridview = new System.Windows.Forms.DataGridView();
             this.btn_asignar = new System.Windows.Forms.Button();
+            this.btn_cerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.Location = new System.Drawing.Point(616, 13);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
-            this.btn_cerrar.TabIndex = 1;
-            this.btn_cerrar.Text = "Cerrar";
-            this.btn_cerrar.UseVisualStyleBackColor = true;
-            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // datagridview
             // 
@@ -57,13 +47,27 @@
             // 
             // btn_asignar
             // 
+            this.btn_asignar.Image = global::MatriculaUPC.Properties.Resources.add;
             this.btn_asignar.Location = new System.Drawing.Point(616, 330);
             this.btn_asignar.Name = "btn_asignar";
             this.btn_asignar.Size = new System.Drawing.Size(75, 23);
             this.btn_asignar.TabIndex = 0;
             this.btn_asignar.Text = "Asignar";
+            this.btn_asignar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_asignar.UseVisualStyleBackColor = true;
             this.btn_asignar.Click += new System.EventHandler(this.btn_asignar_Click);
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.Image = global::MatriculaUPC.Properties.Resources.salir;
+            this.btn_cerrar.Location = new System.Drawing.Point(616, 13);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cerrar.TabIndex = 1;
+            this.btn_cerrar.Text = "Cerrar";
+            this.btn_cerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // frm_AsignarEquipo
             // 

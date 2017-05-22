@@ -38,11 +38,13 @@
             // 
             // btn_cerrar
             // 
+            this.btn_cerrar.Image = global::MatriculaUPC.Properties.Resources.salir;
             this.btn_cerrar.Location = new System.Drawing.Point(714, 12);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
             this.btn_cerrar.TabIndex = 3;
             this.btn_cerrar.Text = "Cerrar";
+            this.btn_cerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
@@ -59,11 +61,13 @@
             // 
             // btn_agregar
             // 
+            this.btn_agregar.Image = global::MatriculaUPC.Properties.Resources.registrar;
             this.btn_agregar.Location = new System.Drawing.Point(714, 337);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(75, 23);
             this.btn_agregar.TabIndex = 0;
             this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
@@ -76,11 +80,13 @@
             // 
             // btn_filtrar
             // 
+            this.btn_filtrar.Image = global::MatriculaUPC.Properties.Resources.filtrar;
             this.btn_filtrar.Location = new System.Drawing.Point(400, 9);
             this.btn_filtrar.Name = "btn_filtrar";
             this.btn_filtrar.Size = new System.Drawing.Size(75, 23);
             this.btn_filtrar.TabIndex = 2;
             this.btn_filtrar.Text = "Filtrar";
+            this.btn_filtrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_filtrar.UseVisualStyleBackColor = true;
             this.btn_filtrar.Click += new System.EventHandler(this.btn_filtrar_Click);
             // 

@@ -116,21 +116,25 @@
             // 
             // btn_agregar
             // 
+            this.btn_agregar.Image = global::MatriculaUPC.Properties.Resources.guardar;
             this.btn_agregar.Location = new System.Drawing.Point(169, 229);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(75, 23);
             this.btn_agregar.TabIndex = 5;
             this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // btn_cancelar
             // 
+            this.btn_cancelar.Image = global::MatriculaUPC.Properties.Resources.cancelar;
             this.btn_cancelar.Location = new System.Drawing.Point(266, 229);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
             this.btn_cancelar.TabIndex = 6;
             this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
