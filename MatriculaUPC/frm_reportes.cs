@@ -12,18 +12,33 @@ namespace MatriculaUPC
 {
     public partial class frm_Reportes : Form
     {
+        List<Avance> avances;
+ 
         public frm_Reportes()
         {
             InitializeComponent();
         }
 
+        private Decimal GetPorcentajePromedio(int DesarrolladorId)
+        {
+            decimal promedio = 0;
+            promedio = avances
+                .Where(x => x.DesarrolladorReponsableId == DesarrolladorId)
+                .GroupBy(x => new {x.AvanceId, x.Porcentaje})
+                .Average(x => x.Key.Porcentaje);
+            return promedio;
+        } 
+
         private void frm_Reportes_Load(object sender, EventArgs e)
         {
+            avances = Program.ctx.Proyectoes.Where(x => x.EstaFinalizado == false).SelectMany(x => x.Avances).ToList();
+
             var responsables = Program.ctx.Proyectoes
                 .GroupBy(x => new
                 {
                     x.Desarrollador,
                 })
+                .AsEnumerable()
                 .Select(x => new
                 {
                     Siglas = x.Key.Desarrollador.TipoDocumento.Siglas,
@@ -32,10 +47,7 @@ namespace MatriculaUPC
                     Apellido = x.Key.Desarrollador.Apellido,
                     Finalizados = x.Sum(y => y.EstaFinalizado ? 1 : 0),
                     NoFinalizados = x.Sum(y => y.EstaFinalizado ? 0 : 1),
-                    PorcentajePromedio = x.Select(y => y.Avances
-                            .Where(z => z.Proyecto.EstaFinalizado == false)
-                            .Average(z => z.Porcentaje))
-                        .FirstOrDefault()
+                    PorcentajePromedio = GetPorcentajePromedio(x.Key.Desarrollador.DesarrolladorId)
                 })
                 .ToList();
 
