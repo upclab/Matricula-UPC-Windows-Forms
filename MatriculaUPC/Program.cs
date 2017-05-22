@@ -19,6 +19,7 @@ namespace MatriculaUPC
         public static frm_AsignarEquipo frm_asignar_equipo;
         public static frm_Avances frm_avances;
         public static frm_Avance frm_avance;
+        public static frm_Reportes frm_reportes;
 
         /// <summary>
         /// The main entry point for the application.
@@ -38,6 +39,7 @@ namespace MatriculaUPC
             frm_asignar_equipo = new frm_AsignarEquipo();
             frm_avances = new frm_Avances();
             frm_avance = new frm_Avance();
+            frm_reportes = new frm_Reportes();
 
             Application.Run(frm_principal);
         }

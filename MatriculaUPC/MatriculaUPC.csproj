@@ -120,6 +120,12 @@
     <Compile Include="frm_Proyectos.Designer.cs">
       <DependentUpon>frm_Proyectos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Reportes.Designer.cs">
+      <DependentUpon>frm_Reportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="MatriculaEntity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Proyectos.resx">
       <DependentUpon>frm_Proyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Reportes.resx">
+      <DependentUpon>frm_Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

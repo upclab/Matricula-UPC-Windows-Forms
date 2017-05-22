@@ -30,7 +30,6 @@
         {
             this.btn_desarrolladores = new System.Windows.Forms.Button();
             this.btn_proyectos = new System.Windows.Forms.Button();
-            this.btn_avance = new System.Windows.Forms.Button();
             this.btn_reportes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -54,16 +53,6 @@
             this.btn_proyectos.UseVisualStyleBackColor = true;
             this.btn_proyectos.Click += new System.EventHandler(this.btn_proyectos_Click);
             // 
-            // btn_avance
-            // 
-            this.btn_avance.Location = new System.Drawing.Point(248, 55);
-            this.btn_avance.Name = "btn_avance";
-            this.btn_avance.Size = new System.Drawing.Size(75, 23);
-            this.btn_avance.TabIndex = 2;
-            this.btn_avance.Text = "Avances";
-            this.btn_avance.UseVisualStyleBackColor = true;
-            this.btn_avance.Click += new System.EventHandler(this.btn_avance_Click);
-            // 
             // btn_reportes
             // 
             this.btn_reportes.Location = new System.Drawing.Point(248, 94);
@@ -72,6 +61,7 @@
             this.btn_reportes.TabIndex = 3;
             this.btn_reportes.Text = "Reportes";
             this.btn_reportes.UseVisualStyleBackColor = true;
+            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
             // 
             // frm_Principal
             // 
@@ -79,7 +69,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 147);
             this.Controls.Add(this.btn_reportes);
-            this.Controls.Add(this.btn_avance);
             this.Controls.Add(this.btn_proyectos);
             this.Controls.Add(this.btn_desarrolladores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -93,7 +82,6 @@
 
         private System.Windows.Forms.Button btn_desarrolladores;
         private System.Windows.Forms.Button btn_proyectos;
-        private System.Windows.Forms.Button btn_avance;
         private System.Windows.Forms.Button btn_reportes;
     }
 }

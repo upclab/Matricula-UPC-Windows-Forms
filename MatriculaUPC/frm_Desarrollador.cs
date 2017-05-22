@@ -90,12 +90,12 @@ namespace MatriculaUPC
             {
                 combo_tipo_documento.SelectedIndex = 0;
             }
+            this.Hide();
             check_activo.Checked = false;
             text_n_documento.Text = "";
             text_nombre.Text = "";
             text_apellido.Text = "";
             desarollador = null;
-            this.Hide();
             Program.frm_desarrolladores.Activate();
         }
     }
