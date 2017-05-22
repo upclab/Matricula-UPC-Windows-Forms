@@ -36,7 +36,7 @@
             // 
             // btn_desarrolladores
             // 
-            this.btn_desarrolladores.Location = new System.Drawing.Point(30, 55);
+            this.btn_desarrolladores.Location = new System.Drawing.Point(40, 38);
             this.btn_desarrolladores.Name = "btn_desarrolladores";
             this.btn_desarrolladores.Size = new System.Drawing.Size(96, 23);
             this.btn_desarrolladores.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // btn_proyectos
             // 
-            this.btn_proyectos.Location = new System.Drawing.Point(30, 94);
+            this.btn_proyectos.Location = new System.Drawing.Point(221, 38);
             this.btn_proyectos.Name = "btn_proyectos";
             this.btn_proyectos.Size = new System.Drawing.Size(96, 23);
             this.btn_proyectos.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // btn_reportes
             // 
-            this.btn_reportes.Location = new System.Drawing.Point(248, 94);
+            this.btn_reportes.Location = new System.Drawing.Point(398, 38);
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Size = new System.Drawing.Size(75, 23);
             this.btn_reportes.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 147);
+            this.ClientSize = new System.Drawing.Size(544, 94);
             this.Controls.Add(this.btn_reportes);
             this.Controls.Add(this.btn_proyectos);
             this.Controls.Add(this.btn_desarrolladores);

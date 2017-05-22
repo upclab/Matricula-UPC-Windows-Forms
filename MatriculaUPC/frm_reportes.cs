@@ -19,19 +19,20 @@ namespace MatriculaUPC
             InitializeComponent();
         }
 
-        private Decimal GetPorcentajePromedio(int DesarrolladorId)
+        private decimal GetPromedio(int DesarrolladorId)
         {
-            decimal promedio = 0;
-            promedio = avances
-                .Where(x => x.DesarrolladorReponsableId == DesarrolladorId)
-                .GroupBy(x => new {x.AvanceId, x.Porcentaje})
-                .Average(x => x.Key.Porcentaje);
-            return promedio;
-        } 
+            int total = avances.Where(y => y.ProyectoId == DesarrolladorId).GroupBy(y => new { y.Proyecto, y.Porcentaje } ).Count();
+
+            decimal suma = avances.Where(y => y.ProyectoId == DesarrolladorId).Sum(y => y.Porcentaje);
+
+            return suma;
+        }
 
         private void frm_Reportes_Load(object sender, EventArgs e)
         {
-            avances = Program.ctx.Proyectoes.Where(x => x.EstaFinalizado == false).SelectMany(x => x.Avances).ToList();
+            avances = Program.ctx.Avances
+                .Where(x => x.Proyecto.EstaFinalizado == false)
+                .ToList();
 
             var responsables = Program.ctx.Proyectoes
                 .GroupBy(x => new
@@ -47,7 +48,7 @@ namespace MatriculaUPC
                     Apellido = x.Key.Desarrollador.Apellido,
                     Finalizados = x.Sum(y => y.EstaFinalizado ? 1 : 0),
                     NoFinalizados = x.Sum(y => y.EstaFinalizado ? 0 : 1),
-                    PorcentajePromedio = GetPorcentajePromedio(x.Key.Desarrollador.DesarrolladorId)
+                    PorcentajePromedio = GetPromedio(x.Key.Desarrollador.DesarrolladorId)
                 })
                 .ToList();
 

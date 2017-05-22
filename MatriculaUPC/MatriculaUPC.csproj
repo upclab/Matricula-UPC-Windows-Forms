@@ -60,6 +60,7 @@
     <Compile Include="Avance.cs">
       <DependentUpon>MatriculaEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="CustomTypes.cs" />
     <Compile Include="Desarrollador.cs">
       <DependentUpon>MatriculaEntity.tt</DependentUpon>
     </Compile>
