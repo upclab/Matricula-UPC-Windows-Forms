@@ -58,7 +58,7 @@
             this.btn_reportes.Location = new System.Drawing.Point(248, 94);
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Size = new System.Drawing.Size(75, 23);
-            this.btn_reportes.TabIndex = 3;
+            this.btn_reportes.TabIndex = 2;
             this.btn_reportes.Text = "Reportes";
             this.btn_reportes.UseVisualStyleBackColor = true;
             this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);

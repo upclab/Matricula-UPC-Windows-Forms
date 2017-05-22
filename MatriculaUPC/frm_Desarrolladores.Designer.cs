@@ -62,7 +62,7 @@
             this.btn_agregar.Location = new System.Drawing.Point(714, 337);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(75, 23);
-            this.btn_agregar.TabIndex = 2;
+            this.btn_agregar.TabIndex = 0;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
@@ -72,14 +72,14 @@
             this.txt_filtro.Location = new System.Drawing.Point(12, 12);
             this.txt_filtro.Name = "txt_filtro";
             this.txt_filtro.Size = new System.Drawing.Size(382, 20);
-            this.txt_filtro.TabIndex = 0;
+            this.txt_filtro.TabIndex = 1;
             // 
             // btn_filtrar
             // 
             this.btn_filtrar.Location = new System.Drawing.Point(400, 9);
             this.btn_filtrar.Name = "btn_filtrar";
             this.btn_filtrar.Size = new System.Drawing.Size(75, 23);
-            this.btn_filtrar.TabIndex = 1;
+            this.btn_filtrar.TabIndex = 2;
             this.btn_filtrar.Text = "Filtrar";
             this.btn_filtrar.UseVisualStyleBackColor = true;
             this.btn_filtrar.Click += new System.EventHandler(this.btn_filtrar_Click);

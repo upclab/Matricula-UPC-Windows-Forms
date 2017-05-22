@@ -47,14 +47,14 @@
             this.dgv_responsables.Name = "dgv_responsables";
             this.dgv_responsables.ReadOnly = true;
             this.dgv_responsables.Size = new System.Drawing.Size(777, 211);
-            this.dgv_responsables.TabIndex = 9;
+            this.dgv_responsables.TabIndex = 0;
             // 
             // btn_cerrar
             // 
             this.btn_cerrar.Location = new System.Drawing.Point(714, 12);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
-            this.btn_cerrar.TabIndex = 8;
+            this.btn_cerrar.TabIndex = 2;
             this.btn_cerrar.Text = "Cerrar";
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
@@ -66,7 +66,7 @@
             this.label1.Location = new System.Drawing.Point(12, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 13);
-            this.label1.TabIndex = 10;
+            this.label1.TabIndex = 3;
             this.label1.Text = "Reporte de Responsable";
             // 
             // dgv_proyectos
@@ -78,7 +78,7 @@
             this.dgv_proyectos.Name = "dgv_proyectos";
             this.dgv_proyectos.ReadOnly = true;
             this.dgv_proyectos.Size = new System.Drawing.Size(777, 211);
-            this.dgv_proyectos.TabIndex = 9;
+            this.dgv_proyectos.TabIndex = 1;
             // 
             // label2
             // 
@@ -87,7 +87,7 @@
             this.label2.Location = new System.Drawing.Point(12, 265);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 13);
-            this.label2.TabIndex = 10;
+            this.label2.TabIndex = 4;
             this.label2.Text = "Reporte por Proyectos";
             // 
             // label3
@@ -97,7 +97,7 @@
             this.label3.Location = new System.Drawing.Point(12, 501);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(297, 13);
-            this.label3.TabIndex = 10;
+            this.label3.TabIndex = 5;
             this.label3.Text = "Nota: Solo se mosrarán los proyectos que presenten avances";
             // 
             // frm_Reportes

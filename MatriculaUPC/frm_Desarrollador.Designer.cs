@@ -46,7 +46,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(266, 192);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancelar.TabIndex = 7;
+            this.btn_cancelar.TabIndex = 6;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
@@ -56,7 +56,7 @@
             this.btn_agregar.Location = new System.Drawing.Point(169, 192);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(75, 23);
-            this.btn_agregar.TabIndex = 6;
+            this.btn_agregar.TabIndex = 5;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
@@ -67,7 +67,7 @@
             this.combo_tipo_documento.Location = new System.Drawing.Point(138, 26);
             this.combo_tipo_documento.Name = "combo_tipo_documento";
             this.combo_tipo_documento.Size = new System.Drawing.Size(203, 21);
-            this.combo_tipo_documento.TabIndex = 1;
+            this.combo_tipo_documento.TabIndex = 0;
             // 
             // label1
             // 
@@ -76,7 +76,7 @@
             this.label1.Location = new System.Drawing.Point(12, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 13);
-            this.label1.TabIndex = 9;
+            this.label1.TabIndex = 7;
             this.label1.Text = "Tipo De Documento";
             // 
             // label2
@@ -96,7 +96,7 @@
             this.label3.Location = new System.Drawing.Point(12, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
-            this.label3.TabIndex = 10;
+            this.label3.TabIndex = 9;
             this.label3.Text = "Nombre";
             // 
             // label4
@@ -106,7 +106,7 @@
             this.label4.Location = new System.Drawing.Point(12, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 10;
+            this.label4.TabIndex = 8;
             this.label4.Text = "Apellido";
             // 
             // text_n_documento
@@ -114,21 +114,21 @@
             this.text_n_documento.Location = new System.Drawing.Point(138, 129);
             this.text_n_documento.Name = "text_n_documento";
             this.text_n_documento.Size = new System.Drawing.Size(203, 20);
-            this.text_n_documento.TabIndex = 4;
+            this.text_n_documento.TabIndex = 3;
             // 
             // text_nombre
             // 
             this.text_nombre.Location = new System.Drawing.Point(138, 94);
             this.text_nombre.Name = "text_nombre";
             this.text_nombre.Size = new System.Drawing.Size(203, 20);
-            this.text_nombre.TabIndex = 3;
+            this.text_nombre.TabIndex = 2;
             // 
             // text_apellido
             // 
             this.text_apellido.Location = new System.Drawing.Point(138, 61);
             this.text_apellido.Name = "text_apellido";
             this.text_apellido.Size = new System.Drawing.Size(203, 20);
-            this.text_apellido.TabIndex = 2;
+            this.text_apellido.TabIndex = 1;
             // 
             // check_activo
             // 
@@ -136,7 +136,7 @@
             this.check_activo.Location = new System.Drawing.Point(15, 171);
             this.check_activo.Name = "check_activo";
             this.check_activo.Size = new System.Drawing.Size(56, 17);
-            this.check_activo.TabIndex = 5;
+            this.check_activo.TabIndex = 4;
             this.check_activo.Text = "Activo";
             this.check_activo.UseVisualStyleBackColor = true;
             // 

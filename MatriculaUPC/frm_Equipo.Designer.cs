@@ -42,14 +42,14 @@
             this.datagridview.Name = "datagridview";
             this.datagridview.ReadOnly = true;
             this.datagridview.Size = new System.Drawing.Size(680, 266);
-            this.datagridview.TabIndex = 0;
+            this.datagridview.TabIndex = 1;
             // 
             // btn_cerrar
             // 
             this.btn_cerrar.Location = new System.Drawing.Point(617, 12);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
-            this.btn_cerrar.TabIndex = 1;
+            this.btn_cerrar.TabIndex = 0;
             this.btn_cerrar.Text = "Cerrar";
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);

@@ -39,7 +39,7 @@
             this.btn_cerrar.Location = new System.Drawing.Point(616, 13);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
-            this.btn_cerrar.TabIndex = 3;
+            this.btn_cerrar.TabIndex = 1;
             this.btn_cerrar.Text = "Cerrar";
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
@@ -60,7 +60,7 @@
             this.btn_asignar.Location = new System.Drawing.Point(616, 330);
             this.btn_asignar.Name = "btn_asignar";
             this.btn_asignar.Size = new System.Drawing.Size(75, 23);
-            this.btn_asignar.TabIndex = 4;
+            this.btn_asignar.TabIndex = 0;
             this.btn_asignar.Text = "Asignar";
             this.btn_asignar.UseVisualStyleBackColor = true;
             this.btn_asignar.Click += new System.EventHandler(this.btn_asignar_Click);
